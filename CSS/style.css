@@ -1,22 +1,22 @@
 * {
-     background-color: orange;
+     background-color: #efa238;
     
 }
 
 h1 {
-    color: limegreen;
+    color: #a4df1d;
 }
 
 h2 {
-    color: limegreen;
+    color: #a4df1d;
 }
 
 h3 {
-    color: limegreen;
+    color: #a4df1d;
 }
 
 ul {
-    background-color: lime;
+    background-color: #a4df1d;
     color: orange;
     display:inline-block;
         border:5px solid #FFC0CB;        ;
