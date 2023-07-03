@@ -1,0 +1,25 @@
+* {
+     background-color: orange;
+    
+}
+
+h1 {
+    color: limegreen;
+}
+
+h2 {
+    color: limegreen;
+}
+
+h3 {
+    color: limegreen;
+}
+
+ul {
+    background-color: lime;
+    color: orange;
+    display:inline-block;
+        border:5px solid #FFC0CB;        ;
+        padding:20px;
+        
+}
