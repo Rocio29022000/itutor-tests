@@ -1,7 +1,6 @@
 "use strict"
 console.log("Hi!")
 
-
 //empty array to push new questions when created
 const questions = [];
 
