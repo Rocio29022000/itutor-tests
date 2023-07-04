@@ -59,5 +59,3 @@ renderQ();
         //mark++
 //}   
 //}
-
-//mcq 
