@@ -42,23 +42,23 @@ nav {
 
 .card {
     display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: 180px;
   padding: 1.5rem;
   margin-top: 50px;
   margin-left: 20px;
   background: #a4df1d;
-  color: sienna;
+  color: #135e30;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   border: 2px;
   box-shadow: 0 0 50px 15px pink;
 }
 
-.navbar {
-
+ul {
+    font-size: 18pt;
 }
 
 img {
@@ -68,5 +68,17 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    
+}
+
+button {
+    font-size: medium;
+    border-color: aquamarine;
+    border-style: dotted;
+    background-color: pink;
+    color: greenyellow;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px pink;
+    cursor: pointer;
     
 }
