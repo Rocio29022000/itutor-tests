@@ -25,6 +25,7 @@ function MCQ(questionName, src, alt) {
     // this.renderQ();
   }
 
+  
 // Create new instances of an object (create new question)
 for (let i=0; i < questions.length; i++){
     new MCQ(questions[i], `/Assets/Maths/c1/Easy/MCQ/${questions[i]}.png`);
@@ -38,13 +39,6 @@ function renderQ(){
 
 }
 renderQ();
-
-
-
-
-
-
-
 
 
 
