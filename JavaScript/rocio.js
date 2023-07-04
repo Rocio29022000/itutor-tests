@@ -13,7 +13,6 @@ let maxQuestions = 2;
 let testQuestions = [];
 let shownQuestions = [];
 let possibleQuestions = ["diff-01", "diff-02", "int-01", "int-02", "surd-01"]
-
 //Random Number generator CHECK IF QUESTIONS OR ALL QUESTIONS FOR THE LENGTH
 function randomNum(){
     // return Math.floor(Math.random() * testQuestions.length);
@@ -33,17 +32,175 @@ for (let i=0; i < possibleQuestions.length; i++){
     new Fill(possibleQuestions[i], `/Assets/Maths/c1/Easy/Fill/${possibleQuestions[i]}.png`);
 }
 
-function renderFill(){
+// Rendering the questions
+
+function renderFillQ(){
+
     let q1 = randomNum();
     console.log("This is image " + q1);
     question.src = testQuestions[q1].src;
     question.alt = testQuestions[q1].name;
-  
+    shownQuestions.push(q1);
+    console.log(shownQuestions)
+    console.log(testQuestions[q1].name)
+    if (testQuestions[q1].name == "diff-01"){
+        answerDiff01();
+    } else if (testQuestions[q1].name == "diff-02"){
+        answerDiff02();
+    }else if (testQuestions[q1].name == "int-01"){
+        answerInt01();
+    }else if (testQuestions[q1].name == "int-01"){
+        answerInt02();
+    }else {
+        answerSurd01();
+    }
+
+    let button = document.createElement("BUTTON");
+    let next = document.createTextNode("Next");
+    button.appendChild(next)
+    questionAnswer.appendChild(button)
 }
-console.log(testQuestions)
 
-renderFill();
+// function renderFillA(){
+//     if ()
 
+//     let button = document.createElement("BUTTON");
+//     let next = document.createTextNode("Next");
+//     button.appendChild(next)
+//     questionAnswer.appendChild(button)
+// }
+
+renderFillQ();
+// renderFillA();
+
+
+function answerDiff01(){
+    let form = document.createElement("FORM");
+    form.setAttribute("type", "text");
+    let fieldset = document.createElement("FIELDSET")
+    let legend = document.createElement("LEGEND")
+    legend.textContent = " Answer Area: "
+    let label = document.createElement("LABEL")
+    label.textContent = "Your Answer: "
+    let input = document.createElement("INPUT")
+    input.setAttribute("type", "number")
+    fieldset.appendChild(legend)
+    fieldset.appendChild(label)
+    fieldset.appendChild(input)
+    form.appendChild(fieldset)
+    questionAnswer.appendChild(form)
+}
+
+function answerDiff02(){
+    let form = document.createElement("FORM");
+    form.setAttribute("type", "text");
+    let fieldset = document.createElement("FIELDSET")
+    let legend = document.createElement("LEGEND")
+    legend.textContent = " Answer Area: "
+    let label1 = document.createElement("LABEL")
+    label1.textContent = "Gradient: "
+    let input1 = document.createElement("INPUT")
+    let label2 = document.createElement("LABEL")
+    label2.textContent = "m: "
+    let input2 = document.createElement("INPUT")
+    let label3 = document.createElement("LABEL")
+    label3.textContent = "c: "
+    let input3 = document.createElement("INPUT")
+    input1.setAttribute("type", "number")
+    input2.setAttribute("type", "number")
+    input3.setAttribute("type", "number")
+    fieldset.appendChild(legend)
+    fieldset.appendChild(label1)
+    fieldset.appendChild(input1)
+    fieldset.appendChild(label2)
+    fieldset.appendChild(input2)
+    fieldset.appendChild(label3)
+    fieldset.appendChild(input3)
+    form.appendChild(fieldset)
+    questionAnswer.appendChild(form)
+}
+function answerInt01(){
+    let form = document.createElement("FORM");
+    form.setAttribute("type", "text");
+    let fieldset = document.createElement("FIELDSET")
+    let legend = document.createElement("LEGEND")
+    legend.textContent = " Answer Area: "
+    let label1 = document.createElement("LABEL")
+    label1.textContent = "Answer: "
+    let input1 = document.createElement("INPUT")
+    let label2 = document.createElement("LABEL")
+    label2.innerHTML = "x<sup>4<sup> +"
+    let input2 = document.createElement("INPUT")
+    let label3 = document.createElement("LABEL")
+    label3.textContent = "x + "
+    let input3 = document.createElement("INPUT")
+    input1.setAttribute("type", "number")
+    input2.setAttribute("type", "number")
+    input3.setAttribute("type", "text")
+    fieldset.appendChild(legend)
+    fieldset.appendChild(label1)
+    fieldset.appendChild(input1)
+    fieldset.appendChild(label2)
+    fieldset.appendChild(input2)
+    fieldset.appendChild(label3)
+    fieldset.appendChild(input3)
+    form.appendChild(fieldset)
+    questionAnswer.appendChild(form)
+}
+function answerInt02(){
+    let form = document.createElement("FORM");
+    form.setAttribute("type", "text");
+    let fieldset = document.createElement("FIELDSET")
+    let legend = document.createElement("LEGEND")
+    legend.textContent = " Answer Area: "
+    let label1 = document.createElement("LABEL")
+    label1.textContent = "Answer: "
+    let input1 = document.createElement("INPUT")
+    let label2 = document.createElement("LABEL")
+    label2.innerHTML = "x<sup>6<sup> +"
+    let input2 = document.createElement("INPUT")
+    let label3 = document.createElement("LABEL")
+    label3.textContent = "x<sup>4<sup> +"
+    let input3 = document.createElement("INPUT")
+    let label4 = document.createElement("LABEL")
+    label3.textContent = "x + c"
+    input1.setAttribute("type", "number")
+    input2.setAttribute("type", "number")
+    input3.setAttribute("type", "text")
+    fieldset.appendChild(legend)
+    fieldset.appendChild(label1)
+    fieldset.appendChild(input1)
+    fieldset.appendChild(label2)
+    fieldset.appendChild(input2)
+    fieldset.appendChild(label3)
+    fieldset.appendChild(input3)
+    fieldset.appendChild(label4)
+    form.appendChild(fieldset)
+    questionAnswer.appendChild(form)
+}
+function answerSurd01(){
+    let form = document.createElement("FORM");
+    form.setAttribute("type", "text");
+    let fieldset = document.createElement("FIELDSET")
+    let legend = document.createElement("LEGEND")
+    legend.textContent = " Answer Area: "
+    let label1 = document.createElement("LABEL")
+    label1.textContent = "a: "
+    let input1 = document.createElement("INPUT")
+    let label2 = document.createElement("LABEL")
+    label2.textContent = "b: "
+    let input2 = document.createElement("INPUT")
+    input1.setAttribute("type", "number")
+    input2.setAttribute("type", "number")
+    fieldset.appendChild(legend)
+    fieldset.appendChild(label1)
+    fieldset.appendChild(label2)
+    fieldset.appendChild(input1)
+    fieldset.appendChild(label2)
+    fieldset.appendChild(input2)
+    form.appendChild(fieldset)
+    questionAnswer.appendChild(form)
+}
 
 
 
