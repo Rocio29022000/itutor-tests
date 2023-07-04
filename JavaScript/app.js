@@ -33,11 +33,6 @@ function Fill(questionName, src, alt) {
     allQuestions.push(this)
   }
 
-
-// Create new instances of an object (create new question)
-
-
-
 function renderMCQ(){
     let q1 = randomNum();
     console.log("This is MCQ " + q1);
@@ -52,23 +47,28 @@ function renderFill(){
     question.alt = allQuestions[q1].alt;
   
   }
-
-function which(){
+// Create new instances of an object (create new question)
+for (let i=0; i < questions.length; i++){
+    new MCQ(questions[i], `/Assets/Maths/c1/Easy/MCQ/${questions[i]}.png`);
+}
+console.log(allQuestions)
+// Create new instances of an object (create new question)
+for (let i=0; i < questions.length; i++){
+    new Fill(questions[i], `/Assets/Maths/c1/Easy/Fill/${questions[i]}.png`);
+  }
+  console.log(allQuestions)
+function mcqOrFill(){
     let mcqOrFill = randomNum();
     console.log(mcqOrFill)
     if (mcqOrFill == 1){
-        for (let i=0; i < questions.length; i++){
-            new MCQ(questions[i], `/Assets/Maths/c1/Easy/MCQ/${questions[i]}.png`);
-        }
         renderMCQ();
+        console.log("hi")
     } else {
-        for (let i=0; i < questions.length; i++){
-            new Fill(questions[i], `/Assets/Maths/c1/Easy/Fill/${questions[i]}.png`);
-          }
         renderFill();
+        console.log(allQuestions)
     }
 }
-which();
+mcqOrFill();
 
 
 
