@@ -1,16 +1,17 @@
 "use strict"
+console.log ("Fill it in!")
 
-const questionName = document.getElementById("question-area");
 const questionAnswer = document.getElementById("answer-area");
 const question = document.getElementById("question");
 
+//empty array to push new questions when created
 let allQuestions = [];
 let questions = ["01", "02"]
 
+//Random Number generator CHECK IF QUESTIONS OR ALL QUESTIONS FOR THE LENGTH
 function randomNum(){
   return Math.floor(Math.random() * allQuestions.length);
 }
-
 
 
 //FOR NOW: Construct Fill in questions
@@ -41,7 +42,7 @@ renderQ();
   //   if (questionSection1 === "2" && questionSection2 === "4" && questionSection3 = "c") 
   //   questionAnswer = true
    
-    // q1 = new MCQ(blah,blah.blah, [correctansw1, correctansw2,])
+    // q1 = new Fill(blah,blah.blah, [correctansw1, correctansw2,])
 
     // <p>E=M <input type='text' id='q1' maxlength='1' size='2'/> ^2 </p>
 

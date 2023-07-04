@@ -1,5 +1,7 @@
 "use strict"
-console.log("Hi!")
+console.log("'Tis the MCQ")
+ 
+let ro = "cool"
 
 //Target elements
 const questionName = document.getElementById("question-area");
