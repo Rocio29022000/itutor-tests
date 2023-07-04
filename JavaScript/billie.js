@@ -2,24 +2,44 @@
 
 const questionName = document.getElementById("question-area");
 const questionAnswer = document.getElementById("answer-area");
+const question = document.getElementById("question");
+
+let allQuestions = [];
+let questions = ["01", "02"]
+
+function randomNum(){
+  return Math.floor(Math.random() * allQuestions.length);
+}
 
 
 
 //FOR NOW: Construct Fill in questions
-//function Fill (questionName, qMin, qMax) {
-  //   this.questionName = questionName;
-  //   this.qMin = qMin;
-  //   this.qMax = qMax;
-  //   this.render();
-  // }
+function Fill(questionName, src, alt) {
+  this.questionName = questionName;
+  this.src = src;
+  this.alt = alt;
+  console.log(this.questionName);
+  console.log(this.src);
+  allQuestions.push(this)
+}
 
-  for (let i = 0; i < questions.length; i++) {
+for (let i=0; i < questions.length; i++){
+  new Fill(questions[i], `/Assets/Maths/c1/Easy/Fill/${questions[i]}.png`);
 
-  }
+}
 
-  let questionSection1 = prompt ("")
-    if (questionSection1 === "2" && questionSection2 === "4" && questionSection3 = "c") 
-    questionAnswer = true
+function renderQ(){
+  let q1 = randomNum();
+  console.log(q1);
+  question.src = allQuestions[q1].src;
+  question.alt = allQuestions[q1].alt;
+
+}
+renderQ();
+
+  // let questionSection1 = prompt ("")
+  //   if (questionSection1 === "2" && questionSection2 === "4" && questionSection3 = "c") 
+  //   questionAnswer = true
    
     // q1 = new MCQ(blah,blah.blah, [correctansw1, correctansw2,])
 
