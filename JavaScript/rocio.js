@@ -49,7 +49,7 @@ function renderFillQ(){
         answerDiff02();
     }else if (testQuestions[q1].name == "int-01"){
         answerInt01();
-    }else if (testQuestions[q1].name == "int-01"){
+    }else if (testQuestions[q1].name == "int-02"){
         answerInt02();
     }else {
         answerSurd01();
@@ -129,7 +129,7 @@ function answerInt01(){
     label1.textContent = "Answer: "
     let input1 = document.createElement("INPUT")
     let label2 = document.createElement("LABEL")
-    label2.innerHTML = "x<sup>4<sup> +"
+    label2.innerHTML = "x<sup>4</sup> +"
     let input2 = document.createElement("INPUT")
     let label3 = document.createElement("LABEL")
     label3.textContent = "x + "
@@ -157,13 +157,13 @@ function answerInt02(){
     label1.textContent = "Answer: "
     let input1 = document.createElement("INPUT")
     let label2 = document.createElement("LABEL")
-    label2.innerHTML = "x<sup>6<sup> +"
+    label2.innerHTML = "x<sup>6</sup> +"
     let input2 = document.createElement("INPUT")
     let label3 = document.createElement("LABEL")
-    label3.textContent = "x<sup>4<sup> +"
+    label3.innerHTML = "x<sup>4</sup> +"
     let input3 = document.createElement("INPUT")
     let label4 = document.createElement("LABEL")
-    label3.textContent = "x + c"
+    label4.textContent = "x + c"
     input1.setAttribute("type", "number")
     input2.setAttribute("type", "number")
     input3.setAttribute("type", "text")
