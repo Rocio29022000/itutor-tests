@@ -53,7 +53,7 @@ nav {
   align-items: center;
   width: 180px;
   padding: 1.5rem;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 20px;
   background: #a4df1d;
   color: #135e30;
@@ -66,6 +66,9 @@ nav {
 
 ul {
     font-size: 18pt;
+    list-style-type: " ✧ ";
+    color: #257750;
+    line-height: 50px;
 }
 
 img {
@@ -87,5 +90,10 @@ button {
     border-radius: 10px;
     box-shadow: 0 0 3px 3px pink;
     cursor: pointer;
-    
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+button.themebutton {
+    margin-top: 20px;
 }

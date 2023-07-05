@@ -1,42 +1,27 @@
-"use strict"
-console.log ("Fill it in!")
+"use strict";
 
-const questionAnswer = document.getElementById("answer-area");
-const question = document.getElementById("question");
+// Wait for document to load
+  document.addEventListener("DOMContentLoaded", function(event) {
+  document.documentElement.setAttribute("data-theme", "light");
+      
+// Get our button switcher
+  let themeSwitcher = document.getElementById("theme-switcher");
+      
+// When our button gets clicked
+  themeSwitcher.onclick = function() {
+// Get the current selected theme, on the first run
+// it should be `light`
+  let currentTheme = document.documentElement.getAttribute("data-theme");
+      
+// Switch between `dark` and `light`
+  let switchToTheme = currentTheme === "dark" ? "light" : "dark"
+      
+// Set our current theme to the new one
+  document.documentElement.setAttribute("data-theme", switchToTheme);
+          }
+        }
+        );
 
-//empty array to push new questions when created
-let allQuestions = [];
-let questions = ["01", "02"]
-
-//Random Number generator CHECK IF QUESTIONS OR ALL QUESTIONS FOR THE LENGTH
-function randomNum(){
-  return Math.floor(Math.random() * allQuestions.length);
-}
-
-
-//FOR NOW: Construct Fill in questions
-function Fill(questionName, src, alt) {
-  this.questionName = questionName;
-  this.src = src;
-  this.alt = alt;
-  console.log(this.questionName);
-  console.log(this.src);
-  allQuestions.push(this)
-}
-
-for (let i=0; i < questions.length; i++){
-  new Fill(questions[i], `/Assets/Maths/c1/Easy/Fill/${questions[i]}.png`);
-
-}
-
-function renderQ(){
-  let q1 = randomNum();
-  console.log(q1);
-  question.src = allQuestions[q1].src;
-  question.alt = allQuestions[q1].alt;
-
-}
-renderQ();
 
   // let questionSection1 = prompt ("")
   //   if (questionSection1 === "2" && questionSection2 === "4" && questionSection3 = "c") 
