@@ -9,11 +9,19 @@ const question = document.getElementById("question");
 //Set number of questions for test
 let maxQuestions = 5; 
 let questionOn = 1;
+let previousQuestion = 0;
+let score = 0;
 
 //empty array to push new questions when created
 let testQuestions = [];
 let shownQuestions = [];
 let possibleQuestions = ["diff-01", "diff-02", "int-01", "int-02", "surd-01"];
+let diff01a = [31];
+let diff02a = [-2, 0.5, 4];
+let int01a = [2, 4, "c"];
+let int02a = [2, -2, 3];
+let surd01a = [3, 2];
+let answers = [];
 
 
 //Random Number generator CHECK IF QUESTIONS OR ALL QUESTIONS FOR THE LENGTH
@@ -91,17 +99,21 @@ function renderFillQ(){
         questionAnswer.removeChild(button1)
         questionAnswer.removeChild(button2)
     }
-
+    let previousQuestion = questionOn -1
+    // console.log(questionOn)
+    // console.log(previousQuestion)
     questionOn ++;
-    console.log(questionOn);
+    // console.log(questionOn);
+    // console.log(previousQuestion)
     
     
     button1.onclick = function() {nextB()};
     button2.onclick = function() {finishB()};
     
-    
+    return previousQuestion
 }
 renderFillQ();
+// console.log(previousQuestion)
 
 function answerDiff01(){
     let form = document.createElement("FORM");
@@ -225,20 +237,83 @@ function answerSurd01(){
     questionAnswer.appendChild(form)
 }
 
-
-
 //Function for the next question
 function nextB(){
-    // call retrive func ------------------------------------------------
+    retrieve();
     console.log("Next question please!")
-    // questionName.removeChild(questionH)
-    // questionAnswer.removeChild(form)
     renderFillQ();
 }
 //Function for results page
 function finishB(){
     console.log("You finished the test, YAY!")
 }
+
+// Function to retrieve the user input
+function retrieve(){
+    let userAnswer = questionAnswer.getElementsByTagName("INPUT")
+    let index = shownQuestions[previousQuestion];
+    let compare = testQuestions[index].name
+    console.log(compare)
+    if (compare == "diff-01"){
+        console.log("This is the first differential Q!")
+        for (let i = 0; i < userAnswer.length; i++){
+          if (diff01a[i] == userAnswer[i]){
+            answers.push("correct")
+            score ++
+          } else{
+            answers.push("incorrect")
+          }
+        }
+      }
+      else if (compare == "diff-02"){
+        console.log("This is the second differential Q!")
+        for (let i = 0; i < userAnswer.length; i++){
+          if (diff02a[i] == userAnswer[i]){
+            answers.push("correct")
+            score ++
+          } else{
+            answers.push("incorrect")
+          }
+        }
+      }
+      else if (compare == "int-01"){
+        console.log("This is the first integration Q!")
+        for (let i = 0; i < userAnswer.length; i++){
+          if (int01a[i] == userAnswer[i]){
+            answers.push("correct")
+            score ++
+        } else{
+            answers.push("incorrect")
+        }
+        }
+      }
+      else if (compare == "int-02"){
+        console.log("This is the second integration Q!")
+        for (let i = 0; i < userAnswer.length; i++){
+          if (int02a[i] == userAnswer[i]){
+            answers.push("correct")
+            score ++
+        } else{
+            answers.push("incorrect")
+        }
+        }
+      }
+      else if (compare == "surd-01"){
+        console.log("This is the first surds Q!")
+        for (let i = 0; i < userAnswer.length; i++){
+          if (surd01a[i] == userAnswer[i]){
+            answers.push("correct")
+            score ++
+        } else{
+            answers.push("incorrect")
+        }
+        }
+      }
+            // console.log(userAnswer[i].value)
+            // console.log(answers[i])
+            console.log(score)
+}
+    
 
 // get element by tag name - input
 // 
