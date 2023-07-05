@@ -7,7 +7,7 @@ const questionAnswer = document.getElementById("answer-area");
 const question = document.getElementById("question");
 
 //Set number of questions for test
-let maxQuestions = 5;
+let maxQuestions = 5; 
 let questionOn = 1;
 
 //empty array to push new questions when created
