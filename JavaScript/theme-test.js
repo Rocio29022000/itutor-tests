@@ -7,7 +7,9 @@ let darkMode = false;
 // add event listeners to the buttons
 document.getElementById("themeSwitch").addEventListener("click", enterDarkMode);
 
-document.getElementById("themeSwitchBack").addEventListener("click", enterLightMode);
+document
+  .getElementById("themeSwitchBack")
+  .addEventListener("click", enterLightMode);
 
 //  create a dark mode function
 function enterDarkMode() {
@@ -45,7 +47,7 @@ function pageLoad() {
   if (storedMode === null) {
     console.log("null");
     return;
-  } else if(storedMode === false) {
+  } else if (storedMode === false) {
     console.log("light");
     enterLightMode();
   } else if (storedMode) {

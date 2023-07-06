@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik"
+    />
     <style>
-    body {
-      font-family: "Rubik", sans-serif;
-    }
+      body {
+        font-family: "Rubik", sans-serif;
+      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <h1> C1: Test</h1>
+  </head>
+  <body>
+    <header>
+      <form id="displayMode">
+        <button>switch themes!</button>
+        <label class="displayLabel" for="dark">
+          <input
+            type="radio"
+            name="mode"
+            id="themeSwitch"
+            class="mode"
+            value="dark"
+          />
+          <span>Dark</span>
+        </label>
+        <label class="displayLabel" for="light">
+          <input
+            type="radio"
+            name="mode"
+            id="themeSwitchBack"
+            class="mode"
+            value="light"
+          />
+          <span>Light</span>
+        </label>
+      </form>
+    </header>
+    <h1>C1: Test</h1>
     <nav>
-        <a href="/">Home</a>
-        <a href="maths.html">Maths</a>
+      <a href="/">Home</a>
+      <a href="maths.html">Maths</a>
     </nav>
 
     <div id="question-area">
-        <img id="question">
+      <img id="question" />
     </div>
-    <div id = "answer-area">
-</div>
+    <div id="answer-area"></div>
     <script src="/JavaScript/rocio.js"></script>
-    <!-- <script src="/JavaScript/billie.js"></script> -->
-    <!-- <script src="/JavaScript/app.js"></script> -->
-</body>
+    <script src="/JavaScript/theme-test.js"></script>
+  </body>
 </html>
