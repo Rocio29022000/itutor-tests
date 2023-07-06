@@ -16,14 +16,27 @@ body {
 </style>
 </head>
 <body>
-    <button class="themebutton" id="theme-switcher">Switch themes!</button>
+    <button class="themebutton" id="darkbutton">Switch themes!</button>
+    <form>
+        <label for="dark">
+          <input type="radio" name="mode" id="darkButton" class="mode" value="dark" />
+          <span>Dark Mode</span>
+        </label>
+        <label for="light">
+          <input type="radio" name="mode" id="lightButton" class="mode" value="light" checked />
+          <span>Light Mode</span>
+        </label>
+      </form>
     <h1>iTutor</h1>
     <nav>
         <a href="/">Home</a>
         <a href="HTML/maths.html">Maths</a>
     </nav>
+<div class="box">
     <h2>Get prepped!</h2>
     <p> This site will become your best friend and greatest ally during your exam preparation from GCSE though to your A-levels.</p>
+</div>
     <script src="billie.js"></script>
+
 </body>
 </html>
