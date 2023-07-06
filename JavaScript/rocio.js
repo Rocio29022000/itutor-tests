@@ -16,13 +16,13 @@ let score = 0;
 let testQuestions = [];
 let shownQuestions = [];
 let possibleQuestions = ["diff-01", "diff-02", "int-01", "int-02", "surd-01"];
+let correctAnswers = [31, -2, 0.5, 4, 2, 4, "c", 2, -2, 3, 3, 2];
 let diff01a = [31];
 let diff02a = [-2, 0.5, 4];
 let int01a = [2, 4, "c"];
 let int02a = [2, -2, 3];
 let surd01a = [3, 2];
 let answers = [];
-
 
 //Random Number generator CHECK IF QUESTIONS OR ALL QUESTIONS FOR THE LENGTH
 function randomNum(){
@@ -44,7 +44,6 @@ for (let i=0; i < possibleQuestions.length; i++){
 }
 
 // Rendering the questions
-
 function renderFillQ(){
     while(questionAnswer.firstChild){
         questionAnswer.removeChild(questionAnswer.firstChild)
@@ -80,7 +79,6 @@ function renderFillQ(){
         answerSurd01();
     }
 
-
     let button1 = document.createElement("BUTTON");
     let next = document.createTextNode("Next");
     button1.appendChild(next)
@@ -99,21 +97,16 @@ function renderFillQ(){
         questionAnswer.removeChild(button1)
         questionAnswer.removeChild(button2)
     }
-    let previousQuestion = questionOn -1
-    // console.log(questionOn)
-    // console.log(previousQuestion)
+    previousQuestion = questionOn -1
+    // console.log("Question is:" + questionOn)
+    // console.log("previous question is:" + previousQuestion)
     questionOn ++;
-    // console.log(questionOn);
-    // console.log(previousQuestion)
-    
-    
+    // console.log("Question is:" + questionOn)
+
     button1.onclick = function() {nextB()};
     button2.onclick = function() {finishB()};
-    
-    return previousQuestion
 }
 renderFillQ();
-// console.log(previousQuestion)
 
 function answerDiff01(){
     let form = document.createElement("FORM");
@@ -240,7 +233,8 @@ function answerSurd01(){
 //Function for the next question
 function nextB(){
     retrieve();
-    console.log("Next question please!")
+    // console.log(previousQuestion)
+    // console.log("Next question please!")
     renderFillQ();
 }
 //Function for results page
@@ -257,18 +251,20 @@ function retrieve(){
     if (compare == "diff-01"){
         console.log("This is the first differential Q!")
         for (let i = 0; i < userAnswer.length; i++){
-          if (diff01a[i] == userAnswer[i]){
+          console.log(`The answer is ${diff01a[i]} and the user input was ${userAnswer[i].value}`)
+          if (diff01a[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
           } else{
             answers.push("incorrect")
           }
+          console.log(answers[i])
         }
       }
       else if (compare == "diff-02"){
         console.log("This is the second differential Q!")
         for (let i = 0; i < userAnswer.length; i++){
-          if (diff02a[i] == userAnswer[i]){
+          if (diff02a[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
           } else{
@@ -279,7 +275,7 @@ function retrieve(){
       else if (compare == "int-01"){
         console.log("This is the first integration Q!")
         for (let i = 0; i < userAnswer.length; i++){
-          if (int01a[i] == userAnswer[i]){
+          if (int01a[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
         } else{
@@ -290,7 +286,7 @@ function retrieve(){
       else if (compare == "int-02"){
         console.log("This is the second integration Q!")
         for (let i = 0; i < userAnswer.length; i++){
-          if (int02a[i] == userAnswer[i]){
+          if (int02a[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
         } else{
@@ -301,7 +297,7 @@ function retrieve(){
       else if (compare == "surd-01"){
         console.log("This is the first surds Q!")
         for (let i = 0; i < userAnswer.length; i++){
-          if (surd01a[i] == userAnswer[i]){
+          if (surd01a[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
         } else{
@@ -311,7 +307,7 @@ function retrieve(){
       }
             // console.log(userAnswer[i].value)
             // console.log(answers[i])
-            console.log(score)
+            console.log("The score is " + score)
 }
     
 
