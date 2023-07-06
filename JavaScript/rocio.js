@@ -4,10 +4,6 @@ console.log("This is a test")
 //Target elements
 const questionArea = document.getElementById("question-area");
 const questionAnswer = document.getElementById("answer-area");
-
-// let image = document.createElement("IMG");
-// image.id = "question"
-// questionArea.appendChild(image)
 const question = document.getElementById("question");
 
 //Set number of questions for test
@@ -19,6 +15,8 @@ let score = 0;
 //empty array to push new questions when created
 let testQuestions = [];
 let shownQuestions = [];
+let allResults = [];
+let testN = 0;
 let possibleQuestions = ["diff-01", "diff-02", "int-01", "int-02", "surd-01"];
 let correctAnswers = [31, -2, 0.5, 4, 2, 4, "c", 2, -2, 3, 3, 2];
 let diff01a = [31];
@@ -49,6 +47,7 @@ for (let i=0; i < possibleQuestions.length; i++){
 
 // Rendering the questions
 function renderFillQ(){
+  testN = JSON.parse(localStorage.getItem("testNumber"))
     while(questionAnswer.firstChild){
         questionAnswer.removeChild(questionAnswer.firstChild)
     }
@@ -102,10 +101,7 @@ function renderFillQ(){
         questionAnswer.removeChild(button2)
     }
     previousQuestion = questionOn -1
-    // console.log("Question is:" + questionOn)
-    // console.log("previous question is:" + previousQuestion)
     questionOn ++;
-    // console.log("Question is:" + questionOn)
 
     button1.onclick = function() {nextB()};
     button2.onclick = function() {finishB()};
@@ -312,7 +308,6 @@ function retrieve(){
         console.log(answers[i])
         }
       }
-            // console.log(userAnswer[i].value)
             
             console.log("The score is " + score)
 }
@@ -360,4 +355,16 @@ function results(){
   
   const resultsChart = document.getElementById("MyChart");
   let myChart = new Chart(resultsChart, config)
+
+  setLocalStorage();
+}
+
+function setLocalStorage(){
+  console.log(typeof(testN))
+  testN++
+  localStorage.setItem("testNumber", JSON.stringify(testN));
+  localStorage.setItem(`Results ${testN}`, JSON.stringify(score));
+  console.log("Score stored")
+  console.log(testN)
+  console.log(localStorage.length)
 }
