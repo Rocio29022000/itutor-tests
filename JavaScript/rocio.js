@@ -2,8 +2,12 @@
 console.log("This is a test")
 
 //Target elements
-const questionName = document.getElementById("question-area");
+const questionArea = document.getElementById("question-area");
 const questionAnswer = document.getElementById("answer-area");
+
+// let image = document.createElement("IMG");
+// image.id = "question"
+// questionArea.appendChild(image)
 const question = document.getElementById("question");
 
 //Set number of questions for test
@@ -238,6 +242,7 @@ function nextB(){
 //Function for results page
 function finishB(){
     console.log("You finished the test, YAY!")
+    results()
 }
 
 // Function to retrieve the user input
@@ -313,16 +318,46 @@ function retrieve(){
 }
     
 function results(){
+  //Remove content
+  questionAnswer.remove()
+  question.remove()
+
+  let message = document.createElement("h2")
+  message.textContent = "Here are your Results!"
+  questionArea.appendChild(message)
+
+  let stat = Math.round((score/correctAnswers.length)*100);
+  let result = document.createElement("p")
+  result.textContent = `You scored ${score} out of ${correctAnswers.length}, which is ${stat}%.`
+  questionArea.appendChild(result)
+
+  let chart = document.createElement("canvas");
+  chart.id = "MyChart"
+  questionArea.appendChild(chart)
+
+  let right = score;
+  let wrong = correctAnswers.length - score;
+
+  const data = {
+    labels: [
+      'Correct',
+      'Incorrect',
+    ],
+    datasets: [{
+      label: 'Results',
+      data: [right, wrong],
+      backgroundColor: [
+        'green',
+        'red',
+      ],
+      hoverOffset: 4
+    }]
+  };
+  const config = {
+    type: 'doughnut',
+    data: data,
+  };
   
+  const resultsChart = document.getElementById("MyChart");
+  let myChart = new Chart(resultsChart, config)
 }
-
-// get element by tag name - input
-// 
-// loop over each element of the returned array
-// add event listener 
-// prevent default 
-// get user input
-// compare to correct ans
-// score point if correct 
-
-// get element by id and then do element.value to get user input 
