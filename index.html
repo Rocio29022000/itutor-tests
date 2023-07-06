@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <meta name="description" content="Exam prep quizes...">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/dark-mode.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
-<style>
-body {
-  font-family: "Rubik", sans-serif;
-}
-</style>
-</head>
-<body>
-    <button class="themebutton" id="darkbutton">Switch themes!</button>
-    <form>
-        <label for="dark">
-          <input type="radio" name="mode" id="darkButton" class="mode" value="dark" />
-          <span>Dark Mode</span>
+    <meta name="description" content="Exam prep quizes..." />
+    <!-- <link rel="stylesheet" href="/CSS/reset.css"> -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik"
+    />
+    <style>
+      body {
+        font-family: "Rubik", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button class="themebutton" id="darkbutton">Switch themes!</button> -->
+    <header>
+      <form id="displayMode">
+        <button>switch themes!</button>
+        <label class="displayLabel" for="dark">
+          <input
+            type="radio"
+            name="mode"
+            id="themeSwitch"
+            class="mode"
+            value="dark"
+          />
+          <span>Dark</span>
         </label>
-        <label for="light">
-          <input type="radio" name="mode" id="lightButton" class="mode" value="light" checked />
-          <span>Light Mode</span>
+        <label class="displayLabel" for="light">
+          <input
+            type="radio"
+            name="mode"
+            id="themeSwitchBack"
+            class="mode"
+            value="light"
+          />
+          <span>Light</span>
         </label>
       </form>
+    </header>
     <h1>iTutor</h1>
     <nav>
-        <a href="/">Home</a>
-        <a href="HTML/maths.html">Maths</a>
+      <a href="/">Home</a>
+      <a href="HTML/maths.html">Maths</a>
     </nav>
-<div class="box">
-    <h2>Get prepped!</h2>
-    <p> This site will become your best friend and greatest ally during your exam preparation from GCSE though to your A-levels.</p>
-</div>
-    <script src="billie.js"></script>
-
-</body>
+    <div class="box">
+      <h2>Get prepped!</h2>
+      <p>
+        This site will become your best friend and greatest ally during your
+        exam preparation from GCSE though to your A-levels.
+      </p>
+    </div>
+    <img
+      src="Assets/visual-flare /sketches for site background2.png"
+      alt="lightbulb"
+    />
+    <!-- <script src="billie.js"></script> -->
+    <script src="JavaScript/theme-test.js"></script>
+  </body>
 </html>

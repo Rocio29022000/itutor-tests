@@ -1,57 +1,49 @@
 * {
-     
-     margin-left: 5px;
-    
+  margin-left: 5px;
 }
 
 h1 {
-    color: #a4df1d;
-    font-size: 100px;
-    margin-left: 20px;
+  color: #a4df1d;
+  font-size: 100px;
+  margin-left: 20px;
 }
 
 h2 {
-    
-    color:#00581C;
-    margin-left: 20px;
+  color: #00581c;
+  margin-left: 20px;
 }
 
 h3 {
-    color: #507021;
-    margin-left: 20px;
+  color: #507021;
+  margin-left: 20px;
 }
 
 a:link {
-    background-color: #a4df1d;
-    text-decoration: none;
-    border-radius: 4px;
-    padding: 5px;
+  background-color: #a4df1d;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 5px;
 }
 
 p {
-    
-    color: #507021;
-    margin-left: 20px;
-    
-
+  color: #507021;
+  margin-left: 20px;
 }
 
 body {
-    background-color: #efa238;
-    letter-spacing: 0.5px;
-    word-spacing: 1px;
-    margin-left: 20px;
+  background-color: #efa238;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin-left: 20px;
 }
-
 
 nav {
-    color: lime;
-    margin-left: 20px;
+  color: lime;
+  margin-left: 20px;
 }
 
-
 .card {
-    display: flex;
+  display: flex;
   justify-content: left;
   align-items: center;
   width: 180px;
@@ -64,46 +56,44 @@ nav {
   border-radius: 10px;
   cursor: pointer;
   border: 2px;
-  box-shadow: 0 0 50px 15px pink;
+  box-shadow: 0 0 50px 15px none;
 }
 
 ul {
-    font-size: 18pt;
-    list-style-type: " ✧ ";
-    color: #257750;
-    line-height: 50px;
+  font-size: 18pt;
+  list-style-type: " ✧ ";
+  color: #257750;
+  line-height: 50px;
 }
 
 img {
-    border-radius: 25px;
-    max-width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    
+  border-radius: 25px;
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 button {
-    font-size: medium;
-    border-color: #507021;
-    border-style: dotted;
-    background-color: pink;
-    color: #507021;
-    border-radius: 10px;
-    box-shadow: 0 0 3px 3px pink;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 5px;
+  font-size: medium;
+  border-color: #507021;
+  border-style: dotted;
+  background-color: pink;
+  color: #507021;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 3px pink;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .dark {
-    color: antiquewhite;
-    background-color: #0C1453;
-  }
-  
-.light {
-    color: #a4df1d;
-    background-color: #efa238;
-  }
+  color: antiquewhite;
+  background-color: #0c1453;
+}
 
+.light {
+  color: #a4df1d;
+  background-color: #efa238;
+}
