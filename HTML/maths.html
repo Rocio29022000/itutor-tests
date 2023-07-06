@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link type="text/css"  href="https://rawgit.com/elrumordelaluz/csshake/master/dist/csshake.min.css"></link>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik"
+    />
     <style>
-    body {
-      font-family: "Rubik", sans-serif;
-    }
+      body {
+        font-family: "Rubik", sans-serif;
+      }
     </style>
-</head>
-<body>
-    <h1>Maths</h1>
+  </head>
+  <body>
+    <header>
+      <form id="displayMode">
+        <button class="hover">switch themes!</button>
+        <label class="displayLabel" for="dark">
+          <input
+            type="radio"
+            name="mode"
+            id="themeSwitch"
+            class="mode"
+            value="dark"
+          />
+          <span>Dark</span>
+        </label>
+        <label class="displayLabel" for="light">
+          <input
+            type="radio"
+            name="mode"
+            id="themeSwitchBack"
+            class="mode"
+            value="light"
+          />
+          <span>Light</span>
+        </label>
+      </form>
+    </header>
+    <h1>
+      Maths
+      <img
+        class="notepad"
+        src="/Assets/visual-flare /notepad.png"
+        alt="notes"
+      />
+    </h1>
     <nav>
-        <a href="/">Home</a>
-        <a href="maths.html">Maths</a>
+      <a href="/">Home</a>
+      <a href="maths.html">Maths</a>
     </nav>
-    <h2> Welcome to your Maths site! </h2>
-    <h3> Choose your level: </h3>
+    <h2>Welcome to your Maths site!</h2>
+    <h3>Choose your level:</h3>
     <div class="card">
-    <ul>
+      <ul>
         <li>GCSE</li>
         <li><a href="a-level.html">A-level</a></li>
-    </ul>
-</div>
-</body>
+      </ul>
+    </div>
+    <script src="/JavaScript/theme-test.js"></script>
+  </body>
 </html>
