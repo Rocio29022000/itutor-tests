@@ -8,6 +8,14 @@ h1 {
   margin-left: 20px;
 }
 
+img.lightbulb {
+  object-fit: scale-down;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+}
+
 h2 {
   color: #00581c;
   margin-left: 20px;
@@ -88,8 +96,17 @@ button {
   margin-bottom: 5px;
 }
 
+canvas {
+  border-radius: 25px;
+  max-width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .dark {
-  color: antiquewhite;
+  color: #507021;
   background-color: #0c1453;
 }
 
