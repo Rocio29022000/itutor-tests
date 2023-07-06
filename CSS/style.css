@@ -11,12 +11,13 @@ h1 {
 }
 
 h2 {
-    color: #a4df1d;
+    
+    color:#00581C;
     margin-left: 20px;
 }
 
 h3 {
-    color: springgreen;
+    color: #507021;
     margin-left: 20px;
 }
 
@@ -28,8 +29,10 @@ a:link {
 }
 
 p {
-    color: springgreen;
+    
+    color: #507021;
     margin-left: 20px;
+    
 
 }
 
@@ -83,10 +86,10 @@ img {
 
 button {
     font-size: medium;
-    border-color: aquamarine;
+    border-color: #507021;
     border-style: dotted;
     background-color: pink;
-    color: greenyellow;
+    color: #507021;
     border-radius: 10px;
     box-shadow: 0 0 3px 3px pink;
     cursor: pointer;
@@ -94,6 +97,13 @@ button {
     margin-bottom: 5px;
 }
 
-button.themebutton {
-    margin-top: 20px;
-}
+.dark {
+    color: antiquewhite;
+    background-color: #0C1453;
+  }
+  
+.light {
+    color: #a4df1d;
+    background-color: #efa238;
+  }
+
