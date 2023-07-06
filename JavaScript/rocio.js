@@ -366,5 +366,4 @@ function setLocalStorage(){
   localStorage.setItem(`Results ${testN}`, JSON.stringify(score));
   console.log("Score stored")
   console.log(testN)
-  console.log(localStorage.length)
 }
