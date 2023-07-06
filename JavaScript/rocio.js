@@ -124,7 +124,6 @@ function answerDiff01(){
     form.appendChild(fieldset)
     questionAnswer.appendChild(form)
 }
-
 function answerDiff02(){
     let form = document.createElement("FORM");
     form.setAttribute("type", "text");
@@ -233,8 +232,7 @@ function answerSurd01(){
 //Function for the next question
 function nextB(){
     retrieve();
-    // console.log(previousQuestion)
-    // console.log("Next question please!")
+    console.log("Next question please!")
     renderFillQ();
 }
 //Function for results page
@@ -250,8 +248,8 @@ function retrieve(){
     console.log(compare)
     if (compare == "diff-01"){
         console.log("This is the first differential Q!")
-        for (let i = 0; i < userAnswer.length; i++){
-          console.log(`The answer is ${diff01a[i]} and the user input was ${userAnswer[i].value}`)
+        for (let i = 0; i < 1; i++){
+          console.log(`The answer is ${correctAnswers[i]} and the user input was ${userAnswer[i].value}`)
           if (diff01a[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
@@ -263,24 +261,26 @@ function retrieve(){
       }
       else if (compare == "diff-02"){
         console.log("This is the second differential Q!")
-        for (let i = 0; i < userAnswer.length; i++){
-          if (diff02a[i] == userAnswer[i].value){
+        for (let i = 1; i < 4; i++){
+          if (correctAnswers[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
           } else{
             answers.push("incorrect")
           }
+          console.log(answers[i])
         }
       }
       else if (compare == "int-01"){
         console.log("This is the first integration Q!")
-        for (let i = 0; i < userAnswer.length; i++){
-          if (int01a[i] == userAnswer[i].value){
+        for (let i = 4; i < 7; i++){
+          if (correctAnswers[i] == userAnswer[i].value){
             answers.push("correct")
             score ++
         } else{
             answers.push("incorrect")
         }
+        console.log(answers[i])
         }
       }
       else if (compare == "int-02"){
@@ -292,6 +292,7 @@ function retrieve(){
         } else{
             answers.push("incorrect")
         }
+        console.log(answers[i])
         }
       }
       else if (compare == "surd-01"){
@@ -303,10 +304,11 @@ function retrieve(){
         } else{
             answers.push("incorrect")
         }
+        console.log(answers[i])
         }
       }
             // console.log(userAnswer[i].value)
-            // console.log(answers[i])
+            
             console.log("The score is " + score)
 }
     
