@@ -1,64 +1,31 @@
 "use strict";
 
-let darkMode = false;
-
-// add event listeners to the buttons
-document.getElementById("darkButton").addEventListener("click", enterDarkMode);
-
-document.getElementById("lightButton").addEventListener("click", enterLightMode);
-
-//  create a dark mode function
-function enterDarkMode() {
-  let body = document.body;
-  let iTutor = document.getElementById("iTutor");
-  let button = document.getElementById("darkButton");
-  body.classList.remove("light");
-  iTutor.classList.remove("light");
-  body.classList.add("dark");
-  iTutor.classList.add("dark");
-  button.setAttribute("checked", "checked");
-  // local storage
-  darkMode = true;
-  // console.log(darkMode);
-  saveMode();
-}
-
-function enterLightMode() {
-  let body = document.body;
-  let iTutor = document.getElementById("iTutor");
-  let button = document.getElementById("lightButton");
-  body.classList.remove("dark");
-  iTutor.classList.remove("dark");
-  body.classList.add("light");
-  iTutor.classList.add("light");
-  button.setAttribute("checked", "checked");
-  //local storage
-  darkMode = false;
-  // console.log(darkMode);
-  saveMode();
-}
-
-function saveMode() {
-  let mode = JSON.stringify(darkMode);
-  localStorage.setItem("darkMode", mode);
-}
-
-function pageLoad() {
-  let storedMode = JSON.parse(localStorage.getItem("darkMode"));
-  // console.log(storedMode);
-  if (storedMode === null) {
-    console.log("null");
-    return;
-  }
-  if (storedMode === false) {
-    console.log("light");
-    enterLightMode();
-  } else if (storedMode) {
-    console.log("dark");
-    enterDarkMode();
+function checkTheme(){
+  const localStoreTheme = localStorage.getItem("Theme")
+  if (localStorage !== null && localStoreTheme === "dark"){
+    document.body.className = localStoreTheme
+    themeSwitch.checked = true;
+  }else{
+    themeSwitch.checked = false;
   }
 }
-pageLoad();
+
+checkTheme()
+function clickHandler(){
+  console.log("click")
+if (this.checked){
+  document.body.classList.remove("light");
+  document.body.classList.add("dark");
+  localStorage.setItem("Theme", "dark")
+}else{ 
+  document.body.classList.remove("dark");
+  document.body.classList.add("light");
+  localStorage.setItem("Theme", "light");
+}
+}
+
+themeSwitch.addEventListener("click", clickHandler)
+
 
   // let questionSection1 = prompt ("")
   //   if (questionSection1 === "2" && questionSection2 === "4" && questionSection3 = "c") 
